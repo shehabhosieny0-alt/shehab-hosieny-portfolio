@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eng. Shehab Hosieny — Mechanical MEP &amp; BIM Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070b14;
+      --bg-elevated: #0e1525;
+      --bg-card: #121c30;
+      --border: rgba(148, 163, 184, 0.14);
+      --border-strong: rgba(56, 189, 248, 0.35);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --cyan: #0ea5e9;
+      --cyan-bright: #38bdf8;
+      --blue: #3b82f6;
+      --gold: #f59e0b;
+      --red: #ef4444;
+      --green: #22c55e;
+      --teal: #14b8a6;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(14, 165, 233, 0.12), transparent 35%),
+        radial-gradient(circle at 85% 25%, rgba(59, 130, 246, 0.10), transparent 40%),
+        linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .mono { font-family: 'JetBrains Mono', Consolas, monospace; }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(7, 11, 20, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 13px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+    .brand-badge {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      display: grid; place-items: center; font-weight: 800; font-size: 15px; color: #fff;
+      box-shadow: 0 0 24px rgba(14, 165, 233, 0.4);
+    }
+    .brand-text strong { display: block; font-size: 15px; font-weight: 700; }
+    .brand-text span { display: block; font-size: 11px; color: var(--text-muted); letter-spacing: 0.5px; text-transform: uppercase; }
+
+    .nav-links { display: flex; align-items: center; gap: 22px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--cyan-bright); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 16px; border-radius: 10px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: none; text-decoration: none; transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), var(--blue)); color: #fff;
+      box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(14, 165, 233, 0.45); }
+    .btn-outline { background: rgba(15, 23, 42, 0.75); color: var(--text); border: 1px solid var(--border); }
+    .btn-outline:hover { border-color: var(--cyan-bright); color: var(--cyan-bright); }
+    .btn-sm { padding: 6px 11px; font-size: 12px; border-radius: 8px; }
+
+    .container { max-width: 1260px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 64px 0; }
+
+    /* Hero */
+    .hero {
+      padding: 56px 0 48px;
+      display: grid; grid-template-columns: 1.05fr 1.15fr; gap: 40px; align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px;
+      background: rgba(14, 165, 233, 0.12); border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--cyan-bright); font-size: 11.5px; font-weight: 600; letter-spacing: 0.6px;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 10px var(--green); }
+    .hero h1 { font-size: clamp(32px, 4.2vw, 48px); font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .hero h1 .accent { background: linear-gradient(135deg, #38bdf8, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-sub { font-size: 16.5px; color: #cbd5e1; font-weight: 500; margin-bottom: 14px; }
+    .hero-desc { font-size: 14.5px; color: var(--text-muted); margin-bottom: 24px; max-width: 540px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .stat-box { background: rgba(18, 28, 48, 0.78); border: 1px solid var(--border); border-radius: 12px; padding: 13px 11px; }
+    .stat-box strong { display: block; font-size: 19px; font-weight: 800; color: var(--cyan-bright); }
+    .stat-box span { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; }
+
+    .hero-visual {
+      position: relative; border-radius: 20px; overflow: hidden;
+      border: 1px solid var(--border-strong); background: #050810;
+      box-shadow: var(--shadow), 0 0 60px rgba(14, 165, 233, 0.14);
+    }
+    .hero-visual img { width: 100%; display: block; aspect-ratio: 16 / 10; object-fit: cover; cursor: zoom-in; transition: transform 0.4s ease; }
+    .hero-visual:hover img { transform: scale(1.02); }
+    .hero-caption {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 20px;
+      background: linear-gradient(transparent, rgba(7, 11, 20, 0.95));
+      display: flex; justify-content: space-between; align-items: flex-end; gap: 12px;
+    }
+    .hero-caption small { color: var(--cyan-bright); font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; display: block; }
+    .hero-caption strong { font-size: 14px; font-weight: 600; }
+
+    /* Section Headings */
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; }
+    .section-tag { color: var(--cyan-bright); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+    .section-head h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.02em; }
+    .section-head p { color: var(--text-muted); max-width: 580px; font-size: 14.5px; }
+
+    /* Project Cards & Discipline Tabs */
+    .project-block {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow);
+    }
+    .project-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+    .project-num { font-size: 12px; color: var(--cyan-bright); letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
+    .project-header h3 { font-size: 24px; font-weight: 800; margin-top: 4px; }
+    .project-loc {
+      padding: 6px 12px; border-radius: 8px;
+      background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--cyan-bright); font-size: 12.5px; font-weight: 600;
+    }
+    .meta-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .pill { padding: 5px 11px; border-radius: 8px; background: rgba(30, 41, 59, 0.78); border: 1px solid var(--border); font-size: 12px; color: #cbd5e1; }
+    .pill strong { color: #fff; font-weight: 600; }
+    .project-desc { color: var(--text-muted); font-size: 14.5px; margin-bottom: 22px; max-width: 960px; }
+
+    /* Discipline Tab Bar */
+    .disc-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .disc-tab {
+      padding: 9px 15px;
+      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .disc-tab .cnt {
+      padding: 1px 7px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.15);
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .disc-tab:hover { border-color: var(--cyan-bright); color: var(--text); }
+    .disc-tab.active {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 6px 20px rgba(14, 165, 233, 0.35);
+    }
+    .disc-tab.active .cnt { background: rgba(255, 255, 255, 0.22); color: #fff; }
+
+    .disc-panel { display: none; animation: fadeIn 0.25s ease; }
+    .disc-panel.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+    .panel-title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .panel-title-bar h4 { font-size: 16px; font-weight: 700; color: #e2e8f0; }
+    .panel-title-bar span { font-size: 12.5px; color: var(--text-muted); }
+
+    /* Interactive 4-Layer BIM Switcher inside AUC 3D Tab */
+    .bim-subtabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .bim-tab {
+      padding: 8px 14px; border-radius: 9px;
+      background: rgba(15, 23, 42, 0.85); border: 1px solid var(--border);
+      color: var(--text-muted); font-size: 12.5px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .bim-tab:hover { border-color: var(--cyan-bright); color: var(--text); }
+    .bim-tab.active { background: rgba(14, 165, 233, 0.2); border-color: var(--cyan-bright); color: var(--cyan-bright); }
+
+    .bim-stage {
+      position: relative; border-radius: 14px; overflow: hidden;
+      border: 1px solid var(--border-strong); background: #060a12; aspect-ratio: 16 / 9;
+      margin-bottom: 14px;
+    }
+    .bim-stage img { width: 100%; height: 100%; object-fit: cover; display: block; cursor: zoom-in; transition: opacity 0.2s ease; }
+    .bim-stage-label {
+      position: absolute; top: 14px; left: 14px;
+      padding: 7px 13px; border-radius: 9px;
+      background: rgba(7, 11, 20, 0.84); backdrop-filter: blur(8px);
+      border: 1px solid var(--border-strong); font-size: 12px; font-weight: 600;
+    }
+    .legend-bar {
+      margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 14px;
+      padding: 11px 15px; border-radius: 12px;
+      background: rgba(15, 23, 42, 0.65); border: 1px solid var(--border);
+      font-size: 12px; color: #cbd5e1;
+    }
+    .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+    .swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+    /* Grids & Cards */
+    .gallery-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .gallery-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .gallery-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+    .img-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .img-card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+    .img-card img {
+      width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+      display: block; background: #0a0f1c; cursor: zoom-in;
+    }
+    .img-card.sheet img { object-fit: contain; background: #ffffff; padding: 6px; }
+    .img-card.boq .boq-sheet-frame {
+      background: #ffffff;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 290px;
+      border-bottom: 1px solid var(--border);
+    }
+    .img-card.boq img {
+      width: auto;
+      max-width: 100%;
+      max-height: 360px;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
+      background: #ffffff;
+      padding: 0;
+      border-radius: 4px;
+    }
+    .img-card-body {
+      padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1;
+    }
+    .img-card-body strong { display: block; font-size: 13.5px; line-height: 1.35; }
+    .img-card-body span { font-size: 12px; color: var(--text-muted); }
+    .card-actions {
+      margin-top: auto; padding-top: 8px;
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+
+    /* ESP Highlight Box */
+    .esp-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+    .esp-metric {
+      background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(56, 189, 248, 0.22);
+      border-radius: 12px; padding: 13px 16px;
+    }
+    .esp-metric small { display: block; font-size: 11px; color: var(--text-muted); text-transform: uppercase; }
+    .esp-metric strong { font-size: 20px; color: var(--cyan-bright); }
+
+    /* Skills */
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .skill-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+    .skill-card h3 { font-size: 16.5px; margin-bottom: 12px; display: flex; align-items: center; gap: 9px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .skill-tag {
+      padding: 5px 10px; border-radius: 8px;
+      background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(56, 189, 248, 0.2);
+      font-size: 12px; color: #e0f2fe; font-weight: 500;
+    }
+
+    /* Experience & Certificates */
+    .exp-card {
+      background: var(--bg-elevated); border: 1px solid var(--border); border-left: 4px solid var(--cyan);
+      border-radius: 16px; padding: 22px 26px; margin-bottom: 20px;
+    }
+    .exp-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+    .exp-top h3 { font-size: 19px; font-weight: 700; }
+    .exp-date { padding: 4px 11px; border-radius: 8px; background: rgba(14, 165, 233, 0.12); color: var(--cyan-bright); font-size: 12px; font-weight: 600; }
+    .exp-org { color: #cbd5e1; font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+    .exp-list { padding-left: 18px; color: var(--text-muted); font-size: 13.5px; }
+    .exp-list li { margin-bottom: 5px; }
+
+    .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .cert-card {
+      background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 14px;
+      overflow: hidden; transition: transform 0.2s, border-color 0.2s;
+    }
+    .cert-card:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+    .cert-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #fff; display: block; cursor: zoom-in; }
+    .cert-body { padding: 14px; }
+    .cert-badge {
+      display: inline-block; font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 6px; background: rgba(34, 197, 94, 0.14); color: #86efac; margin-bottom: 8px;
+    }
+    .cert-body strong { display: block; font-size: 13.5px; line-height: 1.35; margin-bottom: 4px; }
+    .cert-body span { font-size: 12px; color: var(--text-muted); }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); background: rgba(7, 11, 20, 0.92); padding: 44px 0 36px; margin-top: 24px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .footer-inner h3 { font-size: 21px; margin-bottom: 6px; }
+    .footer-inner p { color: var(--text-muted); font-size: 14px; }
+    .contact-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .contact-chip {
+      padding: 10px 15px; border-radius: 10px;
+      background: var(--bg-elevated); border: 1px solid var(--border);
+      color: var(--text); font-size: 13px; font-weight: 500; text-decoration: none;
+    }
+    .contact-chip:hover { border-color: var(--cyan-bright); color: var(--cyan-bright); }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 999;
+      background: rgba(2, 6, 15, 0.95); backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center; padding: 28px;
+      flex-direction: column; gap: 14px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 94vw; max-height: 84vh; border-radius: 12px;
+      border: 1px solid var(--border-strong); box-shadow: 0 25px 80px rgba(0, 0, 0, 0.85);
+      background: #0b1120;
+    }
+    .lightbox-caption { color: #cbd5e1; font-size: 14px; font-weight: 500; text-align: center; }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 26px;
+      background: rgba(30, 41, 59, 0.88); color: #fff; border: 1px solid var(--border);
+      width: 42px; height: 42px; border-radius: 50%; font-size: 22px; cursor: pointer;
+    }
+
+    /* Outer Portfolio Cover Gate */
+    .cover-gate {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px 52px;
+      position: relative;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(14, 165, 233, 0.16), transparent 52%),
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.12), transparent 45%),
+        linear-gradient(180deg, #050811 0%, #070b14 100%);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .cover-gate-inner {
+      width: 100%;
+      max-width: 1120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 22px;
+    }
+    .cover-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--cyan-bright);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+    .cover-frame {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      border-radius: 22px;
+      padding: 10px;
+      background: linear-gradient(145deg, rgba(56, 189, 248, 0.35), rgba(15, 23, 42, 0.8), rgba(59, 130, 246, 0.3));
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.72), 0 0 70px rgba(14, 165, 233, 0.18);
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+    }
+    .cover-frame:hover {
+      transform: translateY(-6px) scale(1.008);
+      box-shadow: 0 42px 100px rgba(0, 0, 0, 0.82), 0 0 90px rgba(56, 189, 248, 0.28);
+    }
+    .cover-frame img {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+      cursor: zoom-in;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .cover-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .cover-enter-btn {
+      padding: 13px 28px;
+      font-size: 14.5px;
+      border-radius: 12px;
+      letter-spacing: 0.2px;
+    }
+    .cover-scroll-hint {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      animation: floatHint 2.2s ease-in-out infinite;
+    }
+    @keyframes floatHint {
+      0%, 100% { transform: translateY(0); opacity: 0.65; }
+      50% { transform: translateY(5px); opacity: 1; }
+    }
+
+    /* 3D Software Tabs Showcase — Dedicated SOFTWARE Box */
+    .software-section { padding: 44px 0 36px; }
+    .sw-box-frame {
+      background: linear-gradient(180deg, rgba(14, 21, 37, 0.96) 0%, rgba(10, 16, 29, 0.98) 100%);
+      border: 1px solid var(--border-strong);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow), 0 0 50px rgba(14, 165, 233, 0.08);
+    }
+    .sw-box-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sw-box-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.22), rgba(59, 130, 246, 0.18));
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+    .sw-box-count {
+      font-size: 12px;
+      color: var(--cyan-bright);
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .sw-tabs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      perspective: 1100px;
+      margin-bottom: 22px;
+    }
+    .sw-tab-card {
+      position: relative;
+      background: #10192a;
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      border-radius: 18px;
+      padding: 15px 10px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, box-shadow 0.28s ease;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.42);
+      color: var(--text);
+      font-family: inherit;
+    }
+    .sw-tab-card:hover {
+      border-color: rgba(56, 189, 248, 0.55);
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.6), 0 0 28px rgba(14, 165, 233, 0.22);
+    }
+    .sw-tab-card.active {
+      border-color: var(--cyan-bright);
+      background: linear-gradient(180deg, #132038 0%, #0f1829 100%);
+      box-shadow: 0 22px 46px rgba(0, 0, 0, 0.65), 0 0 34px rgba(14, 165, 233, 0.32);
+    }
+    .sw-tab-card.active::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 22%;
+      right: 22%;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--cyan), var(--blue));
+    }
+    .sw-icon-wrap {
+      width: 92px;
+      height: 92px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #10192a;
+      display: grid;
+      place-items: center;
+      transform: translateZ(26px);
+      transition: transform 0.3s ease;
+    }
+    .sw-tab-card:hover .sw-icon-wrap {
+      transform: translateZ(36px) scale(1.06);
+    }
+    .sw-icon-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .sw-tab-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f8fafc;
+      line-height: 1.2;
+      transform: translateZ(16px);
+    }
+    .sw-tab-role {
+      font-size: 11px;
+      color: #94a3b8;
+      line-height: 1.35;
+      transform: translateZ(12px);
+      min-height: 30px;
+    }
+    .sw-tab-code {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--cyan-bright);
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.24);
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transform: translateZ(14px);
+    }
+    .sw-cv-strip {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .sw-detail-panel {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+      box-shadow: var(--shadow);
+      transition: opacity 0.2s ease;
+    }
+    .sw-detail-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+      min-width: 260px;
+    }
+    .sw-detail-thumb {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      background: #10192a;
+      border: 1px solid var(--border);
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .sw-detail-left h4 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+    .sw-detail-left p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      max-width: 680px;
+    }
+    .sw-detail-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* About Me Section */
+    .about-section { padding: 36px 0 28px; }
+    .about-card {
+      background: linear-gradient(145deg, rgba(14, 21, 37, 0.96) 0%, rgba(11, 18, 34, 0.98) 100%);
+      border: 1px solid var(--border-strong);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: var(--shadow), 0 0 45px rgba(14, 165, 233, 0.08);
+    }
+    .about-top {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+    .about-bio p {
+      color: #cbd5e1;
+      font-size: 14.5px;
+      line-height: 1.75;
+      margin-bottom: 12px;
+    }
+    .about-bio p strong { color: #fff; }
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .about-mini {
+      background: rgba(18, 28, 48, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 15px 16px;
+    }
+    .about-mini small {
+      display: block;
+      font-size: 10.5px;
+      color: var(--cyan-bright);
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .about-mini strong {
+      display: block;
+      font-size: 13.5px;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .about-mini span {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .about-projects-strip {
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .about-proj-pill {
+      display: block;
+      text-decoration: none;
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .about-proj-pill:hover {
+      border-color: var(--cyan-bright);
+      transform: translateY(-2px);
+    }
+    .about-proj-pill small {
+      display: block;
+      font-size: 10px;
+      color: var(--cyan-bright);
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .about-proj-pill strong {
+      display: block;
+      font-size: 13px;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .about-proj-pill span {
+      display: block;
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 1024px) {
+      .about-top { grid-template-columns: 1fr; }
+      .about-projects-strip { grid-template-columns: repeat(2, 1fr); }
+      .sw-tabs-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .skills-grid, .gallery-3 { grid-template-columns: 1fr; }
+      .gallery-2, .gallery-4 { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .sw-tabs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media print {
+      body { background: #fff !important; color: #0f172a !important; }
+      nav, .btn, .lightbox, .disc-tabs, .bim-subtabs { display: none !important; }
+      .disc-panel { display: block !important; margin-bottom: 24px; }
+      .project-block, .skill-card, .exp-card, .cert-card, .stat-box, .img-card {
+        background: #f8fafc !important; color: #0f172a !important;
+        border-color: #cbd5e1 !important; box-shadow: none !important; break-inside: avoid;
+      }
+      .hero-desc, .project-desc, .section-head p, .img-card-body span, .exp-list, .cert-body span { color: #334155 !important; }
+      section { padding: 24px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- OUTER PORTFOLIO COVER GATE -->
+  <header id="cover" class="cover-gate">
+    <div class="cover-gate-inner">
+      <div class="cover-kicker mono">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--cyan-bright);box-shadow:0 0 10px var(--cyan-bright);"></span>
+        MEP BIM &amp; MECHANICAL DESIGN PORTFOLIO • SELECTED WORKS 2023–2026
+      </div>
+
+      <div class="cover-frame">
+        <img src="assets/portfolio_cover_shehab.jpg"
+             alt="Shehab Hosieny — MEP BIM &amp; Mechanical Design Portfolio 3D Hardcover Book"
+             onclick="openLightbox(this.src, 'Shehab Hosieny — MEP BIM | Mechanical Design Portfolio (2023–2026)')" />
+      </div>
+
+      <div class="cover-actions">
+        <a href="#top" class="btn btn-primary cover-enter-btn">Enter Portfolio ↓</a>
+        <a href="#about" class="btn btn-outline cover-enter-btn">👤 About Me</a>
+        <a href="#software" class="btn btn-outline cover-enter-btn">🧊 3D Software Stack</a>
+        <a href="#projects" class="btn btn-outline cover-enter-btn">📐 Jump to Projects</a>
+      </div>
+
+      <div class="cover-scroll-hint mono">Scroll or click Enter Portfolio to explore</div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#cover" class="brand">
+        <div class="brand-badge">SH</div>
+        <div class="brand-text">
+          <strong>Eng. Shehab Hosieny</strong>
+          <span>Mechanical MEP &amp; BIM Engineer</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#cover">Cover</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#proj-pendry">01 Hotel</a></li>
+        <li><a href="#proj-dc">02 Data Center</a></li>
+        <li><a href="#proj-auc">03 AUC</a></li>
+        <li><a href="#proj-masdar">04 Masdar</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">CV &amp; Certs</a></li>
+      </ul>
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save PDF</button>
+    </div>
+  </nav>
+
+  <main id="top" class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Mechanical BIM &amp; Technical Office Engineer • Riyadh, KSA / Egypt</div>
+        <h1>Eng. Shehab Hosieny <span class="accent">Hassan</span></h1>
+        <p class="hero-sub">Mechanical BIM Engineer | HVAC • Firefighting • Plumbing • Technical Office</p>
+        <p class="hero-desc">
+          Power Mechanics Engineer (Zagazig University) specializing in MEP design, LOD 400 BIM modeling,
+          Navisworks clash detection, shop drawings, and technical office delivery across Egypt,
+          Saudi Arabia (Diriyah, Riyadh), and the UAE (Masdar City, Abu Dhabi).
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Explore All 4 Projects &amp; Drawings →</a>
+          <a href="mailto:shehabhosieny0@gmail.com" class="btn btn-outline">📧 Email</a>
+          <a href="https://wa.me/201153246635" target="_blank" class="btn btn-outline">💬 WhatsApp</a>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-box"><strong>4</strong><span>Mega Projects</span></div>
+          <div class="stat-box"><strong>97.69%</strong><span>KAITECH BIM</span></div>
+          <div class="stat-box"><strong>LOD 400</strong><span>Revit &amp; Navis</span></div>
+          <div class="stat-box"><strong>3</strong><span>EG • KSA • UAE</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="assets/auc_04_federated.png" alt="AUC Campus Expansion Building 17 Full Federated 4K BIM Model"
+             onclick="openLightbox(this.src, 'AUC Campus Expansion (B17) — Full Federated 4K BIM Model')" />
+        <div class="hero-caption">
+          <div>
+            <small class="mono">COMPLETE MEP &amp; BIM TECHNICAL PORTFOLIO</small>
+            <strong>4K 3D Models • 21 Shop Drawings, Composite Sections, ESP &amp; BOQ Sheets</strong>
+          </div>
+          <span class="mono" style="font-size:11px; color:#94a3b8;">Click to Zoom</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- ABOUT ME — PROFILE, ROLE, FOCUS & MEGA PROJECTS                     -->
+    <!-- =================================================================== -->
+    <section id="about" class="about-section">
+      <div class="about-card">
+        <div class="section-head" style="margin-bottom: 20px;">
+          <div>
+            <div class="section-tag mono">👤 About Me • Engineer Profile</div>
+            <h2>Who Is Eng. Shehab Hosieny?</h2>
+          </div>
+          <span class="sw-box-count mono">Mechanical BIM &amp; Technical Office Engineer</span>
+        </div>
+
+        <div class="about-top">
+          <div class="about-bio">
+            <p>
+              I am <strong>Eng. Shehab Hosieny Hassan</strong>, a Mechanical Power Engineer (B.Sc., Zagazig University) specialized in
+              <strong>MEP Design, LOD 400 BIM Coordination, and Technical Office Engineering</strong> across mega projects in
+              <strong>Saudi Arabia, Egypt, and the UAE</strong>.
+            </p>
+            <p>
+              Currently, I work as a <strong>Mechanical BIM &amp; Technical Office Engineer at Saudi Constructioneers Ltd (SAUDICO)</strong>
+              on the flagship <strong>Pendry Hotel &amp; Asset Building in Diriyah, Riyadh</strong>, where I lead basement HVAC BIM modeling,
+              Navisworks clash resolution, Technical RFIs, shop drawing approvals, and ASHRAE External Static Pressure (ESP) calculations.
+              Previously, I worked with <strong>Egyptian Engineering Company (EEC)</strong> on the <strong>AUC Campus Expansion (B17 &amp; B18)</strong>
+              delivering full Firefighting, Water Supply, Drainage, Builders Work, Composite drawings, and BOQs.
+            </p>
+            <p style="margin-bottom:0;">
+              I am deeply passionate about <strong>mission-critical &amp; complex MEP systems</strong> — including
+              <strong>Luxury Hospitality, Data Center Clean Agent Fire Suppression (FK-5-1-12), Healthcare HVAC, and Zero-Clash BIM Delivery</strong>
+              — bridging engineering calculations with site-ready execution.
+            </p>
+          </div>
+
+          <div class="about-highlights">
+            <div class="about-mini">
+              <small class="mono">🏢 Current Role</small>
+              <strong>SAUDICO — Riyadh, KSA</strong>
+              <span>Mechanical BIM &amp; Technical Office Engineer on Pendry Hotel &amp; Asset Building (Diriyah).</span>
+            </div>
+            <div class="about-mini">
+              <small class="mono">⚙️ What I Deliver</small>
+              <strong>LOD 400 BIM &amp; Calcs</strong>
+              <span>Revit Modeling, Navisworks Clashes, Shop &amp; Composite Drawings, RFIs, BOQs, HAP, ESP &amp; Elite Fire.</span>
+            </div>
+            <div class="about-mini">
+              <small class="mono">🎯 Core Interests</small>
+              <strong>High-Complexity MEP</strong>
+              <span>Data Centers, Luxury Hotels, Healthcare HVAC, NFPA Fire Suppression &amp; ISO 19650 BIM Workflows.</span>
+            </div>
+            <div class="about-mini">
+              <small class="mono">🏆 Credentials</small>
+              <strong>97.69% KAITECH BIM</strong>
+              <span>300-Hr Mechanical BIM Track, Autodesk BIM Diploma &amp; B.Sc. Power Mechanics Engineering.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-projects-strip">
+          <a href="#proj-pendry" class="about-proj-pill">
+            <small class="mono">Project 01 • Riyadh, KSA</small>
+            <strong>Pendry Hotel &amp; Assets</strong>
+            <span>HVAC 3D BIM, Shop Drawings &amp; ESP</span>
+          </a>
+          <a href="#proj-dc" class="about-proj-pill">
+            <small class="mono">Project 02 • Yanbu, KSA</small>
+            <strong>YNB01 1MW Data Centre</strong>
+            <span>Clean Agent FK-5-1-12 Fire Suppression</span>
+          </a>
+          <a href="#proj-auc" class="about-proj-pill">
+            <small class="mono">Project 03 • New Cairo, EG</small>
+            <strong>AUC Campus Expansion</strong>
+            <span>4K Federated BIM, MEP SDs &amp; FF BOQ</span>
+          </a>
+          <a href="#proj-masdar" class="about-proj-pill">
+            <small class="mono">Project 04 • Abu Dhabi, UAE</small>
+            <strong>Masdar City Square (MC²)</strong>
+            <span>As-Built Plumbing/CHW &amp; MR-12 Shaft</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- DEDICATED SOFTWARE BOX — ALL 12 CV 3D SOFTWARE TABS                 -->
+    <!-- =================================================================== -->
+    <section id="software" class="software-section">
+      <div class="sw-box-frame">
+        <div class="sw-box-header">
+          <div>
+            <div class="sw-box-badge mono">💻 SOFTWARE</div>
+            <p style="color:var(--text-muted); font-size:13.5px; margin-top:8px;">
+              Complete BIM, MEP Design &amp; Technical Office Software Stack from CV — click any 3D tab to view workflow details.
+            </p>
+          </div>
+          <span class="sw-box-count mono">8 Engineering Programs • Authentic 3D Icons</span>
+        </div>
+
+        <div class="sw-tabs-grid" id="swTabsGrid">
+          <!-- Row 1 -->
+          <button type="button" class="sw-tab-card active" data-sw="revit">
+            <div class="sw-icon-wrap">
+              <img src="assets/icon_revit.png" alt="Autodesk Revit 3D Icon" />
+            </div>
+            <div class="sw-tab-name">Autodesk Revit</div>
+            <div class="sw-tab-role">BIM 3D Modeling &amp; Shop Drawings (LOD 400)</div>
+            <span class="sw-tab-code mono">RVT • 2021–2026</span>
+          </button>
+
+          <button type="button" class="sw-tab-card" data-sw="navisworks">
+            <div class="sw-icon-wrap">
+              <img src="assets/icon_navisworks.png" alt="Autodesk Navisworks Manage 3D Icon" />
+            </div>
+            <div class="sw-tab-name">Navisworks Manage</div>
+            <div class="sw-tab-role">Multi-Discipline Clash Detection &amp; 4K NWD</div>
+            <span class="sw-tab-code mono">MAN • CLASH</span>
+          </button>
+
+          <button type="button" class="sw-tab-card" data-sw="acc">
+            <div class="sw-icon-wrap">
+              <img src="assets/icon_acc.png" alt="Autodesk ACC / Forma 3D Icon" />
+            </div>
+            <div class="sw-tab-name">Autodesk ACC</div>
+            <div class="sw-tab-role">Cloud CDE, RFIs &amp; ISO 19650 Workflows</div>
+            <span class="sw-tab-code mono">ACC / FORMA</span>
+          </button>
+
+          <button type="button" class="sw-tab-card" data-sw="hap">
+            <div class="sw-icon-wrap">
+              <img src="assets/icon_hap.png" alt="Carrier HAP 3D Icon" />
+            </div>
+            <div class="sw-tab-name">Carrier HAP</div>
+            <div class="sw-tab-role">HVAC Cooling &amp; Heating Load Calculations</div>
+            <span class="sw-tab-code mono">HAP • LOADS</span>
+          </button>
+
+          <!-- Row 2 -->
+          <button type="button" class="sw-tab-card" data-sw="ductsizer">
+            <div class="sw-icon-wrap">
+              <img src="assets/icon_ductsizer.png" alt="McQuay Duct Sizer 3D Icon" />
+            </div>
+            <div class="sw-tab-name">Duct Sizer</div>
+            <div class="sw-tab-role">HVAC Duct Sizing, Velocity &amp; Friction Drop</div>
+            <span class="sw-tab-code mono">HVAC • SIZING</span>
+          </button>
+
+          <button type="button" class="sw-tab-card" data-sw="elitefire">
+            <div class="sw-icon-wrap">
+              <img src="assets/icon_elitefire.png" alt="Elite Fire 3D Icon" />
+            </div>
+            <div class="sw-tab-name">Elite Fire</div>
+            <div class="sw-tab-role">NFPA Hydraulic Fire Fighting Calculations</div>
+            <span class="sw-tab-code mono">NFPA • FIRE</span>
+          </button>
+
+          <button type="button" class="sw-tab-card" data-sw="autocad">
+            <div class="sw-icon-wrap">
+              <img src="assets/icon_autocad.png" alt="Autodesk AutoCAD 3D Icon" />
+            </div>
+            <div class="sw-tab-name">AutoCAD 2026</div>
+            <div class="sw-tab-role">2D CAD Drafting, IFC Review &amp; As-Built</div>
+            <span class="sw-tab-code mono">CAD • 2D/IFC</span>
+          </button>
+
+          <button type="button" class="sw-tab-card" data-sw="ashrae">
+            <div class="sw-icon-wrap">
+              <img src="assets/icon_ashrae.png" alt="ASHRAE Duct Fitting DB 3D Icon" />
+            </div>
+            <div class="sw-tab-name">ASHRAE Duct DB</div>
+            <div class="sw-tab-role">External Static Pressure (ESP) &amp; Fitting Loss</div>
+            <span class="sw-tab-code mono">ESP • ASHRAE</span>
+          </button>
+        </div>
+
+        <div class="sw-detail-panel" id="swDetailPanel">
+          <div class="sw-detail-left">
+            <img id="swDetailThumb" class="sw-detail-thumb" src="assets/icon_revit.png" alt="Selected software" />
+            <div>
+              <h4 id="swDetailTitle">Autodesk Revit (RVT) — LOD 350–400 MEP BIM Authoring</h4>
+              <p id="swDetailDesc">Full mechanical modeling for HVAC ductwork, chilled water, firefighting, water supply, and drainage; family creation, shop drawings, builders work openings, composite sections, and BOQ schedules across AUC, Pendry Diriyah, and Masdar City.</p>
+            </div>
+          </div>
+          <div class="sw-detail-badges" id="swDetailBadges">
+            <span class="pill"><strong>LOD 400</strong> Modeling</span>
+            <span class="pill"><strong>Shop</strong> Drawings</span>
+            <span class="pill"><strong>BOQ</strong> Extraction</span>
+          </div>
+        </div>
+
+        <div class="sw-cv-strip">
+          <span class="mono" style="color:var(--cyan-bright); font-weight:700;">ALSO IN CV:</span>
+          <span class="pill"><strong>DiRootsOne</strong></span>
+          <span class="pill"><strong>BIM 4D / 5D / 6D / 7D</strong></span>
+          <span class="pill"><strong>ASHRAE</strong></span>
+          <span class="pill"><strong>NFPA</strong></span>
+          <span class="pill"><strong>SMACNA</strong></span>
+          <span class="pill"><strong>IPC</strong></span>
+          <span class="pill"><strong>ISO 19650</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- PROJECTS SECTION — UPDATED ORDER PER PORTFOLIO\LAST                 -->
+    <!-- =================================================================== -->
+    <section id="projects" style="padding-top: 24px;">
+      <div class="section-head">
+        <div>
+          <div class="section-tag mono">4 Mega Projects • Organized by Discipline</div>
+          <h2>Complete Engineering &amp; BIM Deliverables</h2>
+        </div>
+        <p>Every project is organized by MEP discipline with 3D BIM views, full-resolution drawing previews, and direct vector PDF access for shop drawings, calculations, and BOQ schedules.</p>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- PROJECT 01: PENDRY HOTEL & ASSET BUILDING — DIRIYAH, RIYADH, KSA    -->
+      <!-- =================================================================== -->
+      <article id="proj-pendry" class="project-block" data-project="pendry">
+        <div class="project-header">
+          <div>
+            <div class="project-num mono">PROJECT 01 • LUXURY HOSPITALITY (SAUDI ARABIA) • HVAC BIM &amp; ESP</div>
+            <h3>Pendry Hotel &amp; Asset Building — Diriyah, Riyadh (BV-BNW-112)</h3>
+          </div>
+          <div class="project-loc">📍 Diriyah, Riyadh, KSA</div>
+        </div>
+
+        <div class="meta-pills">
+          <span class="pill"><strong>Company:</strong> Saudi Constructioneers Ltd (SAUDICO)</span>
+          <span class="pill"><strong>Role:</strong> Mechanical BIM / Technical Office Engineer</span>
+          <span class="pill"><strong>Period:</strong> April 2026 – Present</span>
+          <span class="pill"><strong>Scope:</strong> 3 Basements (Pendry Hotel) + 1 Basement (Asset Building)</span>
+        </div>
+
+        <p class="project-desc">
+          Coordinating HVAC works across three basement levels of the Pendry Hotel and one basement level of the Asset Building —
+          Revit 3D HVAC modeling, Navisworks clash detection, IFC review, Technical RFIs, HVAC shop drawing approval,
+          and complete External Static Pressure (ESP) calculations per ASHRAE Duct Fitting Database.
+        </p>
+
+        <div class="disc-tabs">
+          <button class="disc-tab active" data-target="pendry-3d">🧊 3D HVAC BIM <span class="cnt">4</span></button>
+          <button class="disc-tab" data-target="pendry-sd">❄️ HVAC Shop Drawings <span class="cnt">2</span></button>
+          <button class="disc-tab" data-target="pendry-esp">📈 ESP Calculations <span class="cnt">2</span></button>
+        </div>
+
+        <!-- TAB 1: 3D HVAC BIM -->
+        <div id="pendry-3d" class="disc-panel active">
+          <div class="panel-title-bar">
+            <h4>3D Coordinated HVAC Ductwork &amp; Chilled Water BIM Views</h4>
+            <span>4 High-Detail 3D BIM Coordination Views</span>
+          </div>
+          <div class="gallery-2">
+            <div class="img-card">
+              <img src="assets/hotel_3d_01.jpg" alt="Pendry Hotel 3D HVAC BIM Overview"
+                   onclick="openLightbox(this.src, 'Pendry Hotel Diriyah — Full Basement 3D HVAC Ductwork &amp; CHW BIM Model')" />
+              <div class="img-card-body">
+                <strong>Full Basement 3D HVAC &amp; CHW Coordination Model</strong>
+                <span>Supply, Return, Fresh Air, Exhaust Ducts &amp; Chilled Water Risers</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/hotel_3d_01.jpg', 'Pendry Hotel Diriyah — Full Basement 3D HVAC Model')">🔍 Zoom</button>
+                </div>
+              </div>
+            </div>
+            <div class="img-card">
+              <img src="assets/hotel_3d_02.jpg" alt="Pendry Hotel 3D HVAC Zone View 02"
+                   onclick="openLightbox(this.src, 'Pendry Hotel Diriyah — 3D HVAC Ductwork &amp; Equipment Coordination View 02')" />
+              <div class="img-card-body">
+                <strong>3D HVAC Mechanical Zone Coordination (View 02)</strong>
+                <span>Detailed basement duct routing, diffusers &amp; FCU connections</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/hotel_3d_02.jpg', 'Pendry Hotel Diriyah — 3D HVAC Coordination View 02')">🔍 Zoom</button>
+                </div>
+              </div>
+            </div>
+            <div class="img-card">
+              <img src="assets/hotel_3d_03.jpg" alt="Pendry Hotel 3D HVAC Zone View 03"
+                   onclick="openLightbox(this.src, 'Pendry Hotel Diriyah — 3D HVAC Ductwork &amp; Riser Coordination View 03')" />
+              <div class="img-card-body">
+                <strong>3D HVAC Mechanical Zone Coordination (View 03)</strong>
+                <span>Multi-level basement supply/exhaust duct networks &amp; risers</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/hotel_3d_03.jpg', 'Pendry Hotel Diriyah — 3D HVAC Coordination View 03')">🔍 Zoom</button>
+                </div>
+              </div>
+            </div>
+            <div class="img-card">
+              <img src="assets/hotel_3d_04.jpg" alt="Pendry Hotel 3D HVAC Zone View 04"
+                   onclick="openLightbox(this.src, 'Pendry Hotel Diriyah — 3D HVAC Plant &amp; Ducting Close-Up View 04')" />
+              <div class="img-card-body">
+                <strong>3D HVAC Plant &amp; Ducting Close-Up (View 04)</strong>
+                <span>LOD 400 AHU/FCU duct transitions, dampers &amp; clearances</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/hotel_3d_04.jpg', 'Pendry Hotel Diriyah — 3D HVAC Close-Up View 04')">🔍 Zoom</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: HVAC SHOP DRAWINGS -->
+        <div id="pendry-sd" class="disc-panel">
+          <div class="panel-title-bar">
+            <h4>Pendry Hotel &amp; Assets — Basement Mechanical HVAC Shop Drawings</h4>
+            <span>2 Coordinated Shop Drawing Sheets</span>
+          </div>
+          <div class="gallery-2">
+            <div class="img-card sheet">
+              <img src="assets/sheets/hotel_sd_2201.png" alt="Pendry Hotel Basement 2B2 HVAC Shop Drawing 2201"
+                   onclick="openLightbox(this.src, 'BV-BNW-112-0000-SCL-SDW-ME-2B2-0002201 — Pendry Hotel Basement 2B2 HVAC Shop Drawing')" />
+              <div class="img-card-body">
+                <strong>Pendry Hotel — Basement 2B2 HVAC Shop Drawing (2201)</strong>
+                <span class="mono">BV-BNW-112-0000-SCL-SDW-ME-2B2-0002201</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/hotel_sd_2201.png', 'BV-BNW-112-0000-SCL-SDW-ME-2B2-0002201')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/hotel_sd_2201.pdf" target="_blank">📄 Open Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card">
+              <img src="assets/sheets/hotel_sd_extra.jpg" alt="Pendry Assets Basement 1 HVAC Ducting Part A"
+                   onclick="openLightbox(this.src, 'BV-BNW-195-0000-SCL-SDW-ME-2B1-0005082 — Pendry Assets Basement 1 HVAC Ducting Part A')" />
+              <div class="img-card-body">
+                <strong>Pendry Assets — Basement 1 HVAC Ducting Part A (5082)</strong>
+                <span class="mono">BV-BNW-195-0000-SCL-SDW-ME-2B1-0005082 • With VRF/FCU/AHU Schedules &amp; 3D Inset</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/hotel_sd_extra.jpg', 'BV-BNW-195-0000-SCL-SDW-ME-2B1-0005082 — Pendry Assets Basement 1 HVAC Ducting Part A')">🔍 Zoom Fullscreen</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: ESP CALCULATIONS -->
+        <div id="pendry-esp" class="disc-panel">
+          <div class="esp-metrics">
+            <div class="esp-metric"><small>Calculated Index Run ΔP</small><strong class="mono">408.0 Pa</strong></div>
+            <div class="esp-metric"><small>Design Safety Factor</small><strong class="mono">+15%</strong></div>
+            <div class="esp-metric"><small>Grand Total Required ESP</small><strong class="mono">469.2 Pa</strong></div>
+          </div>
+          <div class="gallery-2">
+            <div class="img-card sheet">
+              <img src="assets/sheets/hotel_esp_bcu.png" alt="ESP Calculation for BCU"
+                   onclick="openLightbox(this.src, 'Pendry Hotel Diriyah — ESP Calculation Package for BCU')" />
+              <div class="img-card-body">
+                <strong>ESP Calculation Package for BCU</strong>
+                <span>Full duct index path analysis &amp; ASHRAE fitting loss documentation</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/hotel_esp_bcu.png', 'ESP Calculation for BCU')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/hotel_esp_bcu.pdf" target="_blank">📄 Open Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card sheet">
+              <img src="assets/sheets/hotel_esp_calc.png" alt="ASHRAE Pressure Drop Breakdown"
+                   onclick="openLightbox(this.src, 'Pendry Hotel Diriyah — ASHRAE Pressure Drop Breakdown (469.2 Pa)')" />
+              <div class="img-card-body">
+                <strong>ASHRAE Pressure Drop Breakdown Sheet</strong>
+                <span>Sections 1–11 fitting codes (CR3-1, CR8-2, CR9-6, SR4-1) = 469.2 Pa</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/hotel_esp_calc.png', 'ASHRAE Pressure Drop Breakdown (469.2 Pa)')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/hotel_esp_calc.pdf" target="_blank">📄 Open Full PDF</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- =================================================================== -->
+      <!-- PROJECT 02: YNB01 1MW DATA CENTRE — MODON OASIS, YANBU, KSA         -->
+      <!-- =================================================================== -->
+      <article id="proj-dc" class="project-block" data-project="dc">
+        <div class="project-header">
+          <div>
+            <div class="project-num mono">PROJECT 02 • MISSION-CRITICAL DATA CENTER (SAUDI ARABIA) • FIRE SUPPRESSION</div>
+            <h3>YNB01 1MW Data Centre — Modon Oasis, Yanbu</h3>
+          </div>
+          <div class="project-loc">📍 Yanbu, Saudi Arabia</div>
+        </div>
+
+        <div class="meta-pills">
+          <span class="pill"><strong>Client:</strong> DATAVOLT</span>
+          <span class="pill"><strong>EPC Contractor:</strong> DCT (Data Center Technologies)</span>
+          <span class="pill"><strong>Consultant:</strong> MEINHARDT</span>
+          <span class="pill"><strong>System:</strong> Clean Agent FK-5-1-12 (70 bar) Fire Suppression</span>
+        </div>
+
+        <p class="project-desc">
+          Fire Suppression BIM modeling and shop drawing delivery for the YNB01 1MW Data Centre — covering Ground Floor Clean Agent
+          FK-5-1-12 (70 bar) gas bank rooms, 3D manifold &amp; cylinder assemblies, detailed 1:25 sections, Data Hall room void &amp; ceiling void
+          piping networks, 3D isometrics, nozzle performance tables, and portable fire extinguisher breakdown schedules.
+        </p>
+
+        <div class="disc-tabs">
+          <button class="disc-tab active" data-target="dc-3d">🧊 3D View &amp; Gas Bank <span class="cnt">1</span></button>
+          <button class="disc-tab" data-target="dc-sd">🔥 Data Hall Shop Drawing <span class="cnt">1</span></button>
+        </div>
+
+        <!-- TAB 1: 3D VIEW & GAS BANK -->
+        <div id="dc-3d" class="disc-panel active">
+          <div class="panel-title-bar">
+            <h4>Ground Floor Fire Suppression Plan, Gas Bank 3D View &amp; Sections (1:25)</h4>
+            <span class="mono">YNB01-SDC-DC-01-01-DR-F-1210 • Issued for Approval</span>
+          </div>
+          <div class="img-card sheet">
+            <img src="assets/sheets/dc_ff_1210.png" alt="YNB01 1MW Data Centre Fire Suppression 3D View and Sections 1210" style="aspect-ratio: 16/10;"
+                 onclick="openLightbox(this.src, 'YNB01-SDC-DC-01-01-DR-F-1210 — Ground Floor Fire Suppression Plan, Gas Bank 3D View &amp; Sections')" />
+            <div class="img-card-body">
+              <strong>Ground Floor Fire Suppression — Gas Bank 3D View, Sections 01–03 &amp; Schedules (Sheet 1210)</strong>
+              <span class="mono">YNB01-SDC-DC-01-01-DR-F-1210 • FK-5-1-12 (70 bar) Cylinder Manifolds, Pipe Hangers &amp; Extinguisher QTY</span>
+              <div class="card-actions">
+                <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/dc_ff_1210.png', 'YNB01-SDC-DC-01-01-DR-F-1210 — Gas Bank 3D View &amp; Sections')">🔍 Zoom Fullscreen</button>
+                <a class="btn btn-primary btn-sm" href="pdfs/dc_ff_1210.pdf" target="_blank">📄 Open Full Vector PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: DATA HALL SHOP DRAWING -->
+        <div id="dc-sd" class="disc-panel">
+          <div class="panel-title-bar">
+            <h4>Data Hall Fire Suppression — Room Void &amp; Ceiling Void Plans + 3D Isometrics</h4>
+            <span class="mono">YNB01-SDC-DC-01-01-DR-F-1211 • Issued for Approval</span>
+          </div>
+          <div class="img-card sheet">
+            <img src="assets/sheets/dc_ff_1211.png" alt="YNB01 1MW Data Centre Data Hall Fire Suppression 1211" style="aspect-ratio: 16/10;"
+                 onclick="openLightbox(this.src, 'YNB01-SDC-DC-01-01-DR-F-1211 — Data Hall Room Void &amp; Ceiling Void Fire Suppression + 3D Isometrics')" />
+            <div class="img-card-body">
+              <strong>Data Hall Fire Suppression — Room Void &amp; Ceiling Void + 3D Isometrics (Sheet 1211)</strong>
+              <span class="mono">YNB01-SDC-DC-01-01-DR-F-1211 • Concentration Summary, Nozzle Performance &amp; 3D Isometric Pipe Networks</span>
+              <div class="card-actions">
+                <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/dc_ff_1211.png', 'YNB01-SDC-DC-01-01-DR-F-1211 — Data Hall Fire Suppression')">🔍 Zoom Fullscreen</button>
+                <a class="btn btn-primary btn-sm" href="pdfs/dc_ff_1211.pdf" target="_blank">📄 Open Full Vector PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- =================================================================== -->
+      <!-- PROJECT 03: AUC CAMPUS EXPANSION (B17 & B18) — NEW CAIRO, EGYPT     -->
+      <!-- =================================================================== -->
+      <article id="proj-auc" class="project-block" data-project="auc">
+        <div class="project-header">
+          <div>
+            <div class="project-num mono">PROJECT 03 • EDUCATIONAL CAMPUS • 7 DISCIPLINES</div>
+            <h3>AUC Campus Expansion — Buildings B17 &amp; The Hub (B18)</h3>
+          </div>
+          <div class="project-loc">📍 New Cairo, Egypt</div>
+        </div>
+
+        <div class="meta-pills">
+          <span class="pill"><strong>Client:</strong> The American University in Cairo (AUC)</span>
+          <span class="pill"><strong>Main Contractor:</strong> Orascom Construction</span>
+          <span class="pill"><strong>Employer:</strong> EEC (Jun 2025 – Apr 2026)</span>
+          <span class="pill"><strong>PM:</strong> Hill International</span>
+          <span class="pill"><strong>Consultants:</strong> Shaker • EHAF • Kemet</span>
+        </div>
+
+        <p class="project-desc">
+          LOD 350–400 Mechanical BIM modeling, Navisworks clash detection, composite coordination, builders work drawings,
+          shop drawings across HVAC, Firefighting (redesigned from scratch above/below false ceiling), Water Supply, and Drainage,
+          plus Basement Firefighting BOQ extraction for Buildings B17 &amp; B18.
+        </p>
+
+        <!-- Discipline Tabs for AUC -->
+        <div class="disc-tabs">
+          <button class="disc-tab active" data-target="auc-3d">🧊 4K 3D BIM <span class="cnt">1</span></button>
+          <button class="disc-tab" data-target="auc-comp">📐 Composite <span class="cnt">1</span></button>
+          <button class="disc-tab" data-target="auc-hvac">❄️ HVAC <span class="cnt">3</span></button>
+          <button class="disc-tab" data-target="auc-ff">🔥 Fire Fighting <span class="cnt">1</span></button>
+          <button class="disc-tab" data-target="auc-ws">🚿 Water Supply <span class="cnt">2</span></button>
+          <button class="disc-tab" data-target="auc-dr">🔧 Drainage <span class="cnt">3</span></button>
+          <button class="disc-tab" data-target="auc-boq">📊 Basement FF BOQ <span class="cnt">4</span></button>
+        </div>
+
+        <!-- TAB 1: 4K 3D BIM -->
+        <div id="auc-3d" class="disc-panel active">
+          <div class="panel-title-bar">
+            <h4>Full Federated 4K BIM Model (Architecture • Structure • MEP)</h4>
+            <span class="mono">3840 × 2160 UHD • Navisworks Manage</span>
+          </div>
+
+          <div class="bim-stage">
+            <img src="assets/auc_04_federated.png" alt="AUC Building 17 Full Federated 4K BIM Model"
+                 onclick="openLightbox(this.src, 'AUC Campus Expansion (B17) — Full Federated 4K Building Model (Arch + Struct + MEP)')" />
+            <div class="bim-stage-label">Full Federated Building — Ghost Arch + Struct + Vivid MEP (4K UHD)</div>
+          </div>
+
+          <div class="legend-bar">
+            <span class="mono" style="color:#94a3b8; font-weight:600;">MEP LEGEND:</span>
+            <span class="legend-item"><span class="swatch" style="background:#14c7fa;"></span> HVAC Ducts &amp; AHUs</span>
+            <span class="legend-item"><span class="swatch" style="background:#2466f5;"></span> Chilled Water (CHW)</span>
+            <span class="legend-item"><span class="swatch" style="background:#f22929;"></span> Fire Fighting</span>
+            <span class="legend-item"><span class="swatch" style="background:#2ec757;"></span> Drainage</span>
+            <span class="legend-item"><span class="swatch" style="background:#0ddbb8;"></span> Water Supply</span>
+            <span class="legend-item"><span class="swatch" style="background:#fac21f;"></span> Electrical Trays</span>
+          </div>
+        </div>
+
+        <!-- TAB 2: COMPOSITE (1 PDF) -->
+        <div id="auc-comp" class="disc-panel">
+          <div class="panel-title-bar">
+            <h4>Multi-Discipline MEP Composite Coordination Drawing (B18 Second Floor)</h4>
+            <span>1 Coordinated Composite Plan Sheet</span>
+          </div>
+          <div class="img-card sheet">
+            <img src="assets/sheets/auc_comp_0281.png" alt="B18 Second Floor Composite Plan 0281" style="aspect-ratio: 16/9;"
+                 onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-SC-CO-GE-GE-0281-00 — B18 Second Floor MEP Composite Plan')" />
+            <div class="img-card-body">
+              <strong>B18 Second Floor MEP Composite Plan (Sheet 0281)</strong>
+              <span class="mono">AUC-OC-DC08-B18-SC-CO-GE-GE-0281-00</span>
+              <div class="card-actions">
+                <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_comp_0281.png', 'AUC-OC-DC08-B18-SC-CO-GE-GE-0281-00')">🔍 Zoom Fullscreen</button>
+                <a class="btn btn-primary btn-sm" href="pdfs/auc_comp_0281.pdf" target="_blank">📄 Open Full PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: HVAC (3 PDFs) -->
+        <div id="auc-hvac" class="disc-panel">
+          <div class="panel-title-bar">
+            <h4>HVAC Ductwork &amp; Chilled Water Shop Drawings (B18)</h4>
+            <span>3 Coordinated Sheets — Basement CHW, Second Floor &amp; Roof Ducts</span>
+          </div>
+          <div class="gallery-3">
+            <div class="img-card sheet">
+              <img src="assets/sheets/auc_hvac_0091.png" alt="B18 Basement HVAC Piping 0091"
+                   onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-BA-SD-ME-HP-0091-01 — B18 Basement HVAC Piping')" />
+              <div class="img-card-body">
+                <strong>B18 Basement HVAC Piping (CHW)</strong>
+                <span class="mono">AUC-OC-DC08-B18-BA-SD-ME-HP-0091-01</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_hvac_0091.png', 'AUC-OC-DC08-B18-BA-SD-ME-HP-0091-01')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_hvac_0091.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card sheet">
+              <img src="assets/sheets/auc_hvac_0273.png" alt="B18 Second Floor HVAC Ducts 0273"
+                   onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-SC-SD-ME-HD-0273-01 — B18 Second Floor HVAC Ductwork')" />
+              <div class="img-card-body">
+                <strong>B18 Second Floor HVAC Ductwork</strong>
+                <span class="mono">AUC-OC-DC08-B18-SC-SD-ME-HD-0273-01</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_hvac_0273.png', 'AUC-OC-DC08-B18-SC-SD-ME-HD-0273-01')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_hvac_0273.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card sheet">
+              <img src="assets/sheets/auc_hvac_0864.png" alt="B18 Roof HVAC Ducts 0864"
+                   onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-RF-SD-ME-HD-0864-00 — B18 Roof Floor HVAC Ductwork')" />
+              <div class="img-card-body">
+                <strong>B18 Roof Floor HVAC Ductwork</strong>
+                <span class="mono">AUC-OC-DC08-B18-RF-SD-ME-HD-0864-00</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_hvac_0864.png', 'AUC-OC-DC08-B18-RF-SD-ME-HD-0864-00')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_hvac_0864.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: FIRE FIGHTING (1 PDF) -->
+        <div id="auc-ff" class="disc-panel">
+          <div class="panel-title-bar">
+            <h4>Fire Fighting Shop Drawing — Redesigned Above &amp; Below False Ceiling (B18)</h4>
+            <span>1 Coordinated Fire Fighting Sheet</span>
+          </div>
+          <div class="img-card sheet">
+            <img src="assets/sheets/auc_ff_0278.png" alt="B18 Second Floor Fire Fighting 0278" style="aspect-ratio: 16/9;"
+                 onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-SC-SD-ME-FF-0278-01 — B18 Second Floor Fire Fighting')" />
+            <div class="img-card-body">
+              <strong>B18 Second Floor Fire Fighting Shop Drawing (Sheet 0278)</strong>
+              <span class="mono">AUC-OC-DC08-B18-SC-SD-ME-FF-0278-01</span>
+              <div class="card-actions">
+                <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_ff_0278.png', 'AUC-OC-DC08-B18-SC-SD-ME-FF-0278-01')">🔍 Zoom Fullscreen</button>
+                <a class="btn btn-primary btn-sm" href="pdfs/auc_ff_0278.pdf" target="_blank">📄 Open Full PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: WATER SUPPLY (2 PDFs) -->
+        <div id="auc-ws" class="disc-panel">
+          <div class="panel-title-bar">
+            <h4>Domestic Water Supply Shop Drawings (B17 &amp; B18)</h4>
+            <span>2 Coordinated Water Supply Sheets</span>
+          </div>
+          <div class="gallery-2">
+            <div class="img-card sheet">
+              <img src="assets/sheets/auc_ws_0177.png" alt="B17 Ground Floor Water Supply 0177"
+                   onclick="openLightbox(this.src, 'AUC-OC-DC08-B17-GR-SD-ME-WS-0177-01 — B17 Ground Floor Water Supply')" />
+              <div class="img-card-body">
+                <strong>B17 Ground Floor Water Supply Shop Drawing</strong>
+                <span class="mono">AUC-OC-DC08-B17-GR-SD-ME-WS-0177-01</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_ws_0177.png', 'AUC-OC-DC08-B17-GR-SD-ME-WS-0177-01')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_ws_0177.pdf" target="_blank">📄 Open Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card sheet">
+              <img src="assets/sheets/auc_ws_0194.png" alt="B18 First Floor Water Supply 0194"
+                   onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-FR-SD-ME-WS-0194-00 — B18 First Floor Water Supply')" />
+              <div class="img-card-body">
+                <strong>B18 First Floor Water Supply Shop Drawing</strong>
+                <span class="mono">AUC-OC-DC08-B18-FR-SD-ME-WS-0194-00</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_ws_0194.png', 'AUC-OC-DC08-B18-FR-SD-ME-WS-0194-00')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_ws_0194.pdf" target="_blank">📄 Open Full PDF</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 6: DRAINAGE (3 PDFs) -->
+        <div id="auc-dr" class="disc-panel">
+          <div class="panel-title-bar">
+            <h4>Drainage &amp; Gravity Piping Shop Drawings (B18 Basement)</h4>
+            <span>3 Coordinated Basement Drainage Sheets</span>
+          </div>
+          <div class="gallery-3">
+            <div class="img-card sheet">
+              <img src="assets/sheets/auc_dr_0053.png" alt="B18 Basement Drainage 0053"
+                   onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-BA-SD-ME-DS-0053-01 — Basement Drainage Layout')" />
+              <div class="img-card-body">
+                <strong>Basement Drainage Shop Drawing (0053)</strong>
+                <span class="mono">AUC-OC-DC08-B18-BA-SD-ME-DS-0053-01</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_dr_0053.png', 'AUC-OC-DC08-B18-BA-SD-ME-DS-0053-01')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_dr_0053.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card sheet">
+              <img src="assets/sheets/auc_dr_0067.png" alt="B18 Basement Drainage 0067"
+                   onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-BA-SD-ME-DS-0067-01 — Basement Drainage Layout')" />
+              <div class="img-card-body">
+                <strong>Basement Drainage Shop Drawing (0067)</strong>
+                <span class="mono">AUC-OC-DC08-B18-BA-SD-ME-DS-0067-01</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_dr_0067.png', 'AUC-OC-DC08-B18-BA-SD-ME-DS-0067-01')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_dr_0067.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card sheet">
+              <img src="assets/sheets/auc_dr_0068.png" alt="B18 Basement Drainage 0068"
+                   onclick="openLightbox(this.src, 'AUC-OC-DC08-B18-BA-SD-ME-DS-0068-01 — Basement Drainage Layout')" />
+              <div class="img-card-body">
+                <strong>Basement Drainage Shop Drawing (0068)</strong>
+                <span class="mono">AUC-OC-DC08-B18-BA-SD-ME-DS-0068-01</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_dr_0068.png', 'AUC-OC-DC08-B18-BA-SD-ME-DS-0068-01')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_dr_0068.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 7: BASEMENT FF BOQ (4 PDFs — KEPT INTACT WITH SHEET-FITTED VIEW) -->
+        <div id="auc-boq" class="disc-panel">
+          <div class="panel-title-bar">
+            <h4>Sample of Basement Fire Fighting BOQ (Extracted from Revit)</h4>
+            <span>4 Quantity Takeoff Submittal Schedules — Sheet-Fitted View</span>
+          </div>
+          <div class="gallery-2">
+            <div class="img-card boq">
+              <div class="boq-sheet-frame">
+                <img src="assets/sheets/auc_boq_pipe.png" alt="FF BOQ Pipes"
+                     onclick="openLightbox(this.src, 'Basement Fire Fighting BOQ — Pipes Schedule')" />
+              </div>
+              <div class="img-card-body">
+                <strong>Fire Fighting Pipes BOQ</strong>
+                <span>Pipe sizes, schedules &amp; linear quantities (25 mm – 150 mm)</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_boq_pipe.png', 'Basement Fire Fighting BOQ — Pipes Schedule')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_boq_pipe.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card boq">
+              <div class="boq-sheet-frame">
+                <img src="assets/sheets/auc_boq_fittings.png" alt="FF BOQ Fittings"
+                     onclick="openLightbox(this.src, 'Basement Fire Fighting BOQ — Fittings Submittal')" />
+              </div>
+              <div class="img-card-body">
+                <strong>Fire Fighting Fittings BOQ</strong>
+                <span>Threaded &amp; Victaulic grooved elbows, tees, couplings &amp; reducers</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_boq_fittings.png', 'Basement Fire Fighting BOQ — Fittings Submittal')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_boq_fittings.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card boq">
+              <div class="boq-sheet-frame">
+                <img src="assets/sheets/auc_boq_valves.png" alt="FF BOQ Valves"
+                     onclick="openLightbox(this.src, 'Basement Fire Fighting BOQ — Valves Schedule')" />
+              </div>
+              <div class="img-card-body">
+                <strong>Fire Fighting Valves BOQ</strong>
+                <span>Zone control, OS&amp;Y gate, test &amp; drain, ball valves &amp; expansion joints</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_boq_valves.png', 'Basement Fire Fighting BOQ — Valves Schedule')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_boq_valves.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+            <div class="img-card boq">
+              <div class="boq-sheet-frame">
+                <img src="assets/sheets/auc_boq_sprinkler.png" alt="FF BOQ Sprinklers"
+                     onclick="openLightbox(this.src, 'Basement Fire Fighting BOQ — Sprinklers Schedule')" />
+              </div>
+              <div class="img-card-body">
+                <strong>Sprinklers BOQ</strong>
+                <span>Upright (125), pendent (7) &amp; sidewall (3) glass bulb spray sprinklers</span>
+                <div class="card-actions">
+                  <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/auc_boq_sprinkler.png', 'Basement Fire Fighting BOQ — Sprinklers Schedule')">🔍 Zoom</button>
+                  <a class="btn btn-primary btn-sm" href="pdfs/auc_boq_sprinkler.pdf" target="_blank">📄 Full PDF</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- =================================================================== -->
+      <!-- PROJECT 04: MASDAR CITY SQUARE (MC²) — ABU DHABI, UAE               -->
+      <!-- =================================================================== -->
+      <article id="proj-masdar" class="project-block" data-project="masdar">
+        <div class="project-header">
+          <div>
+            <div class="project-num mono">PROJECT 04 • COMMERCIAL / MIXED-USE (UAE) • AS-BUILT COORDINATION</div>
+            <h3>Masdar City Square (MC²) — Plot G-10, Building 1</h3>
+          </div>
+          <div class="project-loc">📍 Abu Dhabi, UAE</div>
+        </div>
+
+        <div class="meta-pills">
+          <span class="pill"><strong>Client:</strong> Masdar</span>
+          <span class="pill"><strong>PM:</strong> Faithful+Gould</span>
+          <span class="pill"><strong>Architect:</strong> Mott MacDonald</span>
+          <span class="pill"><strong>Main Contractor:</strong> ASGC</span>
+          <span class="pill"><strong>MEP:</strong> ASU</span>
+          <span class="pill"><strong>Period:</strong> Nov 2025 – Feb 2026</span>
+        </div>
+
+        <p class="project-desc">
+          As-Built delivery of full Plumbing &amp; Chilled Water systems plus multi-level vertical shaft &amp; mechanical riser coordination
+          (MR-12 HVAC &amp; CHW Riser from Basement 2 through Podium and Levels 01–06 to Roof Floor) with 4 detailed cross-sections (1:75) and 3D Isometric Riser View.
+        </p>
+
+        <div class="img-card sheet">
+          <img src="assets/sheets/masdar_shaft_1.png" alt="Masdar City Square MR-12 Shaft Coordination" style="aspect-ratio: 16/9;"
+               onclick="openLightbox(this.src, 'Masdar City Square (Abu Dhabi) — MR-12 HVAC Riser Coordination (Basement 2 to Roof Floor)')" />
+          <div class="img-card-body">
+            <strong>MR-12 Multi-Level Shaft &amp; Riser Coordination (Basement 2 to Roof Floor)</strong>
+            <span>4 Cross-Sections (A–D, Scale 1:75) + 3D Isometric Riser View — SAD, RAD, FAD, EAD &amp; CHWS/R Risers.</span>
+            <div class="card-actions">
+              <button class="btn btn-outline btn-sm" onclick="openLightbox('assets/sheets/masdar_shaft_1.png', 'Masdar City Square — MR-12 Shaft Coordination')">🔍 Zoom Fullscreen</button>
+              <a class="btn btn-primary btn-sm" href="pdfs/masdar_shaft_1.pdf" target="_blank">📄 Open Full Vector PDF</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills">
+      <div class="section-head">
+        <div>
+          <div class="section-tag mono">Capabilities &amp; Software Stack</div>
+          <h2>Technical Skills &amp; Codes</h2>
+        </div>
+        <p>Combining MEP design engineering fundamentals with LOD 400 BIM coordination and technical office precision.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>🏗️ BIM &amp; 3D Coordination</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Autodesk Revit (2021–2026)</span>
+            <span class="skill-tag">Navisworks Manage</span>
+            <span class="skill-tag">Clash Detection</span>
+            <span class="skill-tag">Dynamo</span>
+            <span class="skill-tag">pyRevit</span>
+            <span class="skill-tag">ACC / ISO 19650</span>
+            <span class="skill-tag">Enscape 3D</span>
+            <span class="skill-tag">BIM 4D / 5D / 6D / 7D</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>⚙️ Mechanical MEP Design</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HVAC Ductwork &amp; AHUs</span>
+            <span class="skill-tag">Chilled Water (CHW)</span>
+            <span class="skill-tag">Fire Fighting &amp; Pump Rooms</span>
+            <span class="skill-tag">Plumbing &amp; Drainage</span>
+            <span class="skill-tag">Liquid Fuel &amp; Medical Gas</span>
+            <span class="skill-tag">HAP (Load Calcs)</span>
+            <span class="skill-tag">Elite Fire</span>
+            <span class="skill-tag">AUTOFLUID</span>
+            <span class="skill-tag">ASHRAE Duct Fitting DB</span>
+            <span class="skill-tag">DuctSizer / Pipe Sizer</span>
+            <span class="skill-tag">ASHRAE • NFPA • SMACNA • IPC</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>📋 Technical Office &amp; Delivery</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">LOD 400 Shop Drawings</span>
+            <span class="skill-tag">Composite Drawings</span>
+            <span class="skill-tag">Builders Work Drawings</span>
+            <span class="skill-tag">Shaft &amp; Riser Coordination</span>
+            <span class="skill-tag">BOQ &amp; Quantity Takeoff</span>
+            <span class="skill-tag">Technical RFIs</span>
+            <span class="skill-tag">As-Built Drawings</span>
+            <span class="skill-tag">AutoCAD 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE, EDUCATION & CERTIFICATES -->
+    <section id="experience">
+      <div class="section-head">
+        <div>
+          <div class="section-tag mono">Curriculum Vitae &amp; Verified Credentials</div>
+          <h2>Experience, Education &amp; Certificates</h2>
+        </div>
+        <p>Full professional track record across Egypt, Saudi Arabia, and the UAE.</p>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-top">
+          <h3>Mechanical BIM / Technical Office Engineer</h3>
+          <span class="exp-date mono">APR 2026 – PRESENT</span>
+        </div>
+        <div class="exp-org">Saudi Constructioneers Ltd (SAUDICO) — Pendry Hotel &amp; Asset Building, Diriyah, Riyadh, KSA</div>
+        <ul class="exp-list">
+          <li>Coordinating HVAC works across three basement levels of Pendry Hotel and one basement level of Asset Building from IFC review to shop drawing approval.</li>
+          <li>Developing Revit HVAC models, running Navisworks clash detection, and preparing Technical RFIs for design conflicts and site coordination.</li>
+          <li>Performing HVAC Static Pressure (ESP) calculations using the ASHRAE Duct Fitting Database.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-top">
+          <h3>Mechanical BIM Engineer</h3>
+          <span class="exp-date mono">JUN 2025 – APR 2026</span>
+        </div>
+        <div class="exp-org">Egyptian Engineering Company (EEC) — AUC Campus Expansion (B17 &amp; The Hub B18), New Cairo, Egypt</div>
+        <ul class="exp-list">
+          <li>Modeled Firefighting, Water Supply, and Drainage systems in Revit up to LOD 350–400; redesigned Firefighting from scratch with full above/below false-ceiling coordination.</li>
+          <li>Prepared Builders Work Drawings for all MEP disciplines (HVAC, Firefighting, Plumbing, Electrical), composite drawings, BOQs, and clean NWD coordination folders.</li>
+          <li>Delivered Water Supply and Firefighting shop drawings for B17 &amp; B18 up to the second floor.</li>
+        </ul>
+      </div>
+
+      <div class="gallery-3" style="margin-bottom: 24px;">
+        <div class="skill-card">
+          <span class="exp-date mono" style="display:inline-block; margin-bottom:10px;">NOV 2025 – FEB 2026</span>
+          <h3 style="margin-bottom:6px;">BIM Engineer — As-Built</h3>
+          <p style="font-size:13px; color:#cbd5e1; margin-bottom:6px;"><strong>Masdar City, Abu Dhabi (Part-Time)</strong></p>
+          <p style="font-size:13px; color:var(--text-muted);">Delivered full plumbing and chilled water As-Built models &amp; MR-12 shaft coordination.</p>
+        </div>
+        <div class="skill-card">
+          <span class="exp-date mono" style="display:inline-block; margin-bottom:10px;">DEC 2025 – JAN 2026</span>
+          <h3 style="margin-bottom:6px;">MEP Design Engineer</h3>
+          <p style="font-size:13px; color:#cbd5e1; margin-bottom:6px;"><strong>Residential Project — KSA</strong></p>
+          <p style="font-size:13px; color:var(--text-muted);">Firefighting &amp; plumbing IFC CAD drawings + water heaters, submersible &amp; booster pump calculations.</p>
+        </div>
+        <div class="skill-card">
+          <span class="exp-date mono" style="display:inline-block; margin-bottom:10px;">AUG – SEP 2025</span>
+          <h3 style="margin-bottom:6px;">FM Engineering Intern</h3>
+          <p style="font-size:13px; color:#cbd5e1; margin-bottom:6px;"><strong>ProService Company</strong></p>
+          <p style="font-size:13px; color:var(--text-muted);">HVAC &amp; fire preventive maintenance, asset lists with equipment classification, and maintenance schedules.</p>
+        </div>
+      </div>
+
+      <div class="gallery-2" style="margin-bottom: 28px;">
+        <div class="skill-card">
+          <h3>🎓 Education</h3>
+          <p style="font-size:15px; font-weight:700; color:#fff; margin-bottom:4px;">B.Sc. in Power Mechanics Engineering</p>
+          <p style="font-size:13.5px; color:#cbd5e1; margin-bottom:8px;">Zagazig University — Faculty of Engineering (2020 – 2025)</p>
+          <span class="cert-badge">Grade: Good</span>
+          <span class="cert-badge" style="margin-left:6px; background:rgba(14,165,233,0.14); color:#7dd3fc;">Military Service: Exempted</span>
+        </div>
+        <div class="skill-card">
+          <h3>📚 Specialized Courses</h3>
+          <ul class="exp-list" style="font-size:13px;">
+            <li><strong>Healthcare HVAC Design Basics</strong> — Eng. Ashraf Abdulbary (Mar 2026 – Present)</li>
+            <li><strong>Liquid Fuel Systems</strong> (Generator Room &amp; Fuel Station) — Eng. Ali Hassan, Fire Matrix</li>
+            <li><strong>KAITECH Mechanical BIM Track</strong> (300 hrs, 97.69% — Feb–Oct 2025)</li>
+            <li><strong>ASEC MEP Diploma</strong> (HVAC, Firefighting, Plumbing, HAP, Elite Fire — 2024)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <img src="assets/cert_eec.png" alt="EEC Experience Certificate"
+               onclick="openLightbox(this.src, 'Certificate of Experience — Egyptian Engineering Company (EEC)')" />
+          <div class="cert-body">
+            <span class="cert-badge">Experience</span>
+            <strong>Egyptian Engineering Company (EEC)</strong>
+            <span>Mechanical BIM Engineer (Jun 2025 – Apr 2026)</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <img src="assets/cert_kaitech_track.jpg" alt="KAITECH BIM Track"
+               onclick="openLightbox(this.src, 'KAITECH — Mechanical BIM Track (300 Hours, Score: 97.69%)')" />
+          <div class="cert-body">
+            <span class="cert-badge">Score: 97.69%</span>
+            <strong>KAITECH — Mechanical BIM Track</strong>
+            <span>300 Hours • ISO 19650, Revit, Navisworks, Dynamo, 4D–7D</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <img src="assets/cert_autodesk.png" alt="Autodesk Diploma"
+               onclick="openLightbox(this.src, 'Autodesk Authorized Academic Partner — Mechanical BIM Diploma (Revit 2024)')" />
+          <div class="cert-body">
+            <span class="cert-badge">Autodesk</span>
+            <strong>Autodesk Mechanical BIM Diploma</strong>
+            <span>Revit 2024 • 105+ Hours • Authorized Partner</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <img src="assets/cert_engx.png" alt="ENG-X Technical Track"
+               onclick="openLightbox(this.src, 'ENG-X — Technical Track (HVAC, Plumbing, Fire Fighting &amp; Medical Design)')" />
+          <div class="cert-body">
+            <span class="cert-badge">Design Track</span>
+            <strong>ENG-X — MEP Technical Track</strong>
+            <span>HVAC, Plumbing, Fire Fighting &amp; Medical Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <h3>Eng. Shehab Hosieny Hassan</h3>
+        <p>Mechanical BIM &amp; Technical Office Engineer — Riyadh, Saudi Arabia / Cairo, Egypt.</p>
+      </div>
+      <div class="contact-chips">
+        <a href="mailto:shehabhosieny0@gmail.com" class="contact-chip">📧 shehabhosieny0@gmail.com</a>
+        <a href="https://wa.me/201153246635" target="_blank" class="contact-chip">📱 +20 115 324 6635 (WhatsApp)</a>
+        <span class="contact-chip">💼 LinkedIn: Shehab Hosieny</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fullscreen Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">×</button>
+    <img id="lightboxImg" src="" alt="Full preview" />
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+
+  <script>
+    // Interactive 3D Software Tabs & 3D Tilt Effect
+    const swData = {
+      revit: {
+        img: 'assets/icon_revit.png',
+        title: 'Autodesk Revit (RVT) — LOD 350–400 MEP BIM Authoring',
+        desc: 'Full mechanical modeling for HVAC ductwork, chilled water, firefighting, water supply, and drainage; family creation, shop drawings, builders work openings, composite sections, and BOQ schedules across AUC, Pendry Diriyah, and Masdar City.',
+        badges: ['<strong>LOD 400</strong> Modeling', '<strong>Shop</strong> Drawings', '<strong>BOQ</strong> Extraction']
+      },
+      navisworks: {
+        img: 'assets/icon_navisworks.png',
+        title: 'Autodesk Navisworks Manage (MAN) — Multi-Discipline Clash Detection',
+        desc: 'Federated 3D model reviews, hard/clearance clash matrices between HVAC, Firefighting, Plumbing, Electrical, Structure, and Architecture, clean NWD coordination folders, and 4K visual walkthroughs.',
+        badges: ['<strong>Clash</strong> Detection', '<strong>NWD</strong> Coordination', '<strong>4K</strong> Federated Views']
+      },
+      acc: {
+        img: 'assets/icon_acc.png',
+        title: 'Autodesk Construction Cloud (ACC / Forma) — ISO 19650 CDE',
+        desc: 'Cloud worksharing, WIP/Shared/Published folder governance, design collaboration, issue tracking, RFIs, and consultant submittal workflows aligned with ISO 19650 BIM standards.',
+        badges: ['<strong>ISO 19650</strong> CDE', '<strong>Cloud</strong> Collaboration', '<strong>Issues</strong> & RFIs']
+      },
+      hap: {
+        img: 'assets/icon_hap.png',
+        title: 'Carrier HAP — Hourly Analysis Program (HVAC Load Calculations)',
+        desc: 'Cooling and heating load estimation, psychrometric analysis, space zoning, ventilation airflow sizing (ASHRAE 62.1), and AHU/FCU equipment selection for commercial and healthcare spaces.',
+        badges: ['<strong>Cooling</strong> & Heating Loads', '<strong>ASHRAE</strong> 62.1 / 90.1', '<strong>AHU / FCU</strong> Selection']
+      },
+      ductsizer: {
+        img: 'assets/icon_ductsizer.png',
+        title: 'McQuay Duct Sizer — Ductwork Sizing & Velocity / Friction Control',
+        desc: 'Rapid equal-friction duct sizing for rectangular and round galvanized/black-steel ductwork, balancing air velocity, noise criteria, and pressure drop prior to ESP calculation.',
+        badges: ['<strong>Equal</strong> Friction', '<strong>Velocity</strong> & NC Control', '<strong>SMACNA</strong> Sizing']
+      },
+      elitefire: {
+        img: 'assets/icon_elitefire.png',
+        title: 'Elite Fire — NFPA Hydraulic Fire Fighting Calculations',
+        desc: 'Hydraulic network modeling for wet/dry sprinkler systems and standpipes, remote area demand verification, pipe sizing, friction loss, and fire pump head & flow selection per NFPA 13/14/20.',
+        badges: ['<strong>NFPA 13</strong> / 14 / 20', '<strong>Hydraulic</strong> Analysis', '<strong>Fire Pump</strong> Sizing']
+      },
+      autocad: {
+        img: 'assets/icon_autocad.png',
+        title: 'Autodesk AutoCAD 2026 — 2D CAD Drafting & IFC Coordination',
+        desc: 'IFC design review, 2D MEP shop drawings, firefighting & plumbing schematic risers, builders work details, and clean As-Built CAD deliverables for consultant approvals.',
+        badges: ['<strong>IFC</strong> Drawings', '<strong>2D Shop</strong> Details', '<strong>As-Built</strong> CAD']
+      },
+      ashrae: {
+        img: 'assets/icon_ashrae.png',
+        title: 'ASHRAE Duct Fitting Database — External Static Pressure (ESP) Calculations',
+        desc: 'Detailed critical-path ESP calculations using exact ASHRAE fitting loss coefficients (C-factors), damper/coil drops, and fan static pressure verification (used on Pendry Hotel Diriyah).',
+        badges: ['<strong>ESP</strong> Calculations', '<strong>ASHRAE</strong> C-Factors', '<strong>Fan</strong> Selection']
+      }
+    };
+
+    const swCards = document.querySelectorAll('.sw-tab-card');
+    const swPanel = document.getElementById('swDetailPanel');
+    const swThumb = document.getElementById('swDetailThumb');
+    const swTitle = document.getElementById('swDetailTitle');
+    const swDesc = document.getElementById('swDetailDesc');
+    const swBadges = document.getElementById('swDetailBadges');
+
+    swCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.dataset.sw;
+        const item = swData[key];
+        if (!item) return;
+        swCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        swPanel.style.opacity = '0.45';
+        setTimeout(() => {
+          swThumb.src = item.img;
+          swTitle.textContent = item.title;
+          swDesc.textContent = item.desc;
+          swBadges.innerHTML = item.badges.map(b => '<span class="pill">' + b + '</span>').join('');
+          swPanel.style.opacity = '1';
+        }, 110);
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `translateY(-6px) rotateX(${(-y * 14).toFixed(1)}deg) rotateY(${(x * 14).toFixed(1)}deg)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // Project Discipline Tabs (scoped per project block)
+    document.querySelectorAll('.project-block').forEach(block => {
+      const tabs = block.querySelectorAll('.disc-tab');
+      const panels = block.querySelectorAll('.disc-panel');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          panels.forEach(p => p.classList.remove('active'));
+          tab.classList.add('active');
+          const target = block.querySelector('#' + tab.dataset.target);
+          if (target) target.classList.add('active');
+        });
+      });
+    });
+
+    // 4-Layer BIM Switcher inside AUC 3D Tab
+    const bimTabs = document.querySelectorAll('.bim-tab');
+    const bimMainImg = document.getElementById('bimMainImg');
+    const bimStageLabel = document.getElementById('bimStageLabel');
+    bimTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        bimTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        bimMainImg.style.opacity = '0.35';
+        setTimeout(() => {
+          bimMainImg.src = tab.dataset.img;
+          bimStageLabel.textContent = tab.dataset.label;
+          bimMainImg.style.opacity = '1';
+        }, 100);
+      });
+    });
+
+    // Fullscreen Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
