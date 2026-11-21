@@ -9,21 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #09090b;
-      --bg-elevated: #111216;
-      --bg-card: #17181e;
-      --border: rgba(212, 168, 67, 0.16);
-      --border-strong: rgba(242, 207, 109, 0.38);
-      --text: #f5f5f4;
+      --bg: #08080a;
+      --bg-elevated: #111115;
+      --bg-card: #17171d;
+      --border: rgba(225, 29, 72, 0.20);
+      --border-strong: rgba(251, 113, 133, 0.42);
+      --text: #f4f4f5;
       --text-muted: #a1a1aa;
-      --cyan: #d4a843;
-      --cyan-bright: #f2cf6d;
-      --blue: #9f711c;
+      --cyan: #e11d48;
+      --cyan-bright: #ff4d6d;
+      --blue: #9f1239;
       --gold: #f59e0b;
       --red: #ef4444;
       --green: #22c55e;
       --teal: #14b8a6;
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      --shadow: 0 20px 55px rgba(0, 0, 0, 0.62);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,10 +33,10 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: var(--bg);
       background-image:
-        radial-gradient(circle at 15% 10%, rgba(212, 168, 67, 0.12), transparent 35%),
-        radial-gradient(circle at 85% 25%, rgba(180, 130, 42, 0.10), transparent 40%),
-        linear-gradient(rgba(212, 168, 67, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212, 168, 67, 0.035) 1px, transparent 1px);
+        radial-gradient(circle at 15% 10%, rgba(225, 29, 72, 0.14), transparent 36%),
+        radial-gradient(circle at 85% 25%, rgba(159, 18, 57, 0.12), transparent 42%),
+        linear-gradient(rgba(228, 228, 231, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(228, 228, 231, 0.03) 1px, transparent 1px);
       background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
       color: var(--text);
       line-height: 1.6;
@@ -51,8 +51,8 @@
       top: 0;
       z-index: 100;
       backdrop-filter: blur(16px);
-      background: rgba(9, 9, 11, 0.88);
-      border-bottom: 1px solid var(--border);
+      background: rgba(8, 8, 10, 0.90);
+      border-bottom: 1px solid rgba(228, 228, 231, 0.10);
     }
     .nav-inner {
       max-width: 1260px;
@@ -759,29 +759,35 @@
       .sw-tabs-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    /* Obsidian & Gold Executive Theme Overrides */
+    /* Jet Black & Metallic Crimson + Platinum Theme Overrides */
     .brand-badge,
     .btn-primary,
     .disc-tab.active {
-      background: linear-gradient(135deg, #f5d377, #c9962d) !important;
-      color: #09090b !important;
-      box-shadow: 0 8px 26px rgba(212, 168, 67, 0.32) !important;
+      background: linear-gradient(135deg, #f43f5e, #be123c) !important;
+      color: #ffffff !important;
+      box-shadow: 0 8px 28px rgba(225, 29, 72, 0.38) !important;
     }
     .btn-primary:hover {
-      box-shadow: 0 12px 34px rgba(242, 207, 109, 0.48) !important;
+      box-shadow: 0 12px 36px rgba(244, 63, 94, 0.55) !important;
     }
     .disc-tab.active .cnt {
-      background: rgba(9, 9, 11, 0.22) !important;
-      color: #09090b !important;
+      background: rgba(255, 255, 255, 0.22) !important;
+      color: #ffffff !important;
     }
     .btn-outline,
     .disc-tab,
     .bim-tab,
     .about-proj-pill {
-      background: rgba(20, 20, 24, 0.85) !important;
+      background: rgba(18, 18, 23, 0.88) !important;
+      border-color: rgba(228, 228, 231, 0.14) !important;
+    }
+    .btn-outline:hover,
+    .disc-tab:hover,
+    .about-proj-pill:hover {
+      border-color: rgba(255, 77, 109, 0.65) !important;
     }
     .hero h1 .accent {
-      background: linear-gradient(135deg, #fae29c, #d4a843, #a8771e) !important;
+      background: linear-gradient(135deg, #ff758f, #e11d48, #e4e4e7) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
     }
@@ -793,61 +799,65 @@
     .esp-metric,
     .skill-tag,
     .exp-date {
-      background: rgba(212, 168, 67, 0.12) !important;
-      border-color: rgba(242, 207, 109, 0.3) !important;
-      color: #f2cf6d !important;
+      background: rgba(225, 29, 72, 0.13) !important;
+      border-color: rgba(251, 113, 133, 0.34) !important;
+      color: #fda4af !important;
     }
     .cover-gate {
       background:
-        radial-gradient(circle at 50% 18%, rgba(212, 168, 67, 0.16), transparent 52%),
-        radial-gradient(circle at 20% 82%, rgba(168, 119, 30, 0.12), transparent 46%),
-        linear-gradient(180deg, #060608 0%, #09090b 100%) !important;
+        radial-gradient(circle at 50% 18%, rgba(225, 29, 72, 0.18), transparent 52%),
+        radial-gradient(circle at 20% 82%, rgba(159, 18, 57, 0.14), transparent 46%),
+        linear-gradient(180deg, #050507 0%, #08080a 100%) !important;
     }
     .cover-frame {
-      background: linear-gradient(145deg, rgba(242, 207, 109, 0.42), rgba(20, 20, 24, 0.9), rgba(180, 130, 42, 0.35)) !important;
-      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.78), 0 0 70px rgba(212, 168, 67, 0.18) !important;
+      background: linear-gradient(145deg, rgba(244, 63, 94, 0.48), rgba(22, 22, 28, 0.92), rgba(228, 228, 231, 0.28)) !important;
+      box-shadow: 0 35px 95px rgba(0, 0, 0, 0.82), 0 0 75px rgba(225, 29, 72, 0.22) !important;
     }
     .about-card,
     .sw-box-frame {
-      background: linear-gradient(180deg, rgba(17, 18, 22, 0.97) 0%, rgba(11, 11, 14, 0.99) 100%) !important;
-      box-shadow: var(--shadow), 0 0 50px rgba(212, 168, 67, 0.08) !important;
+      background: linear-gradient(180deg, rgba(17, 17, 22, 0.97) 0%, rgba(10, 10, 13, 0.99) 100%) !important;
+      border-color: rgba(225, 29, 72, 0.28) !important;
+      box-shadow: var(--shadow), 0 0 55px rgba(225, 29, 72, 0.10) !important;
     }
     .sw-box-badge {
-      background: linear-gradient(135deg, rgba(212, 168, 67, 0.24), rgba(159, 113, 28, 0.18)) !important;
-      border-color: rgba(242, 207, 109, 0.48) !important;
-      color: #fef3c7 !important;
+      background: linear-gradient(135deg, rgba(225, 29, 72, 0.28), rgba(159, 18, 57, 0.22)) !important;
+      border-color: rgba(251, 113, 133, 0.52) !important;
+      color: #ffffff !important;
     }
     .sw-tab-card {
-      background: #14151a !important;
-      border-color: rgba(212, 168, 67, 0.18) !important;
+      background: #131318 !important;
+      border-color: rgba(228, 228, 231, 0.12) !important;
     }
     .sw-tab-card:hover {
-      border-color: rgba(242, 207, 109, 0.55) !important;
-      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.65), 0 0 28px rgba(212, 168, 67, 0.22) !important;
+      border-color: rgba(255, 77, 109, 0.65) !important;
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.68), 0 0 28px rgba(225, 29, 72, 0.26) !important;
     }
     .sw-tab-card.active {
-      background: linear-gradient(180deg, #201c13 0%, #141310 100%) !important;
-      border-color: #f2cf6d !important;
-      box-shadow: 0 22px 46px rgba(0, 0, 0, 0.7), 0 0 32px rgba(212, 168, 67, 0.28) !important;
+      background: linear-gradient(180deg, #241017 0%, #140d10 100%) !important;
+      border-color: #ff4d6d !important;
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.72), 0 0 34px rgba(225, 29, 72, 0.34) !important;
     }
     .sw-icon-wrap {
-      border: 1px solid rgba(242, 207, 109, 0.24);
+      border: 1px solid rgba(228, 228, 231, 0.20);
     }
     .stat-box,
     .about-mini,
     .pill,
     .legend-bar {
-      background: rgba(24, 24, 29, 0.82) !important;
+      background: rgba(22, 22, 28, 0.86) !important;
+      border-color: rgba(228, 228, 231, 0.11) !important;
     }
+    .stat-box strong { color: #ff4d6d !important; }
     .hero-visual {
-      background: #08080a !important;
-      box-shadow: var(--shadow), 0 0 60px rgba(212, 168, 67, 0.14) !important;
+      background: #070709 !important;
+      border-color: rgba(244, 63, 94, 0.36) !important;
+      box-shadow: var(--shadow), 0 0 65px rgba(225, 29, 72, 0.16) !important;
     }
     .hero-caption {
-      background: linear-gradient(transparent, rgba(9, 9, 11, 0.96)) !important;
+      background: linear-gradient(transparent, rgba(8, 8, 10, 0.96)) !important;
     }
-    .bim-stage { background: #08080a !important; }
-    .bim-stage-label { background: rgba(9, 9, 11, 0.86) !important; }
+    .bim-stage { background: #070709 !important; }
+    .bim-stage-label { background: rgba(8, 8, 10, 0.88) !important; }
 
     @media print {
       body { background: #fff !important; color: #0f172a !important; }
