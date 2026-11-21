@@ -9,21 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f4eee4;
-      --bg-elevated: #fffdf9;
-      --bg-card: #fbf8f2;
-      --border: rgba(15, 35, 66, 0.13);
-      --border-strong: rgba(182, 137, 58, 0.45);
-      --text: #0f2342;
-      --text-muted: #4b5a72;
-      --cyan: #0f2342;
-      --cyan-bright: #b6893a;
-      --blue: #1e3a68;
-      --gold: #b6893a;
-      --red: #dc2626;
-      --green: #16a34a;
-      --teal: #0d9488;
-      --shadow: 0 18px 45px rgba(15, 35, 66, 0.09);
+      --bg: #09090b;
+      --bg-elevated: #111216;
+      --bg-card: #17181e;
+      --border: rgba(212, 168, 67, 0.16);
+      --border-strong: rgba(242, 207, 109, 0.38);
+      --text: #f5f5f4;
+      --text-muted: #a1a1aa;
+      --cyan: #d4a843;
+      --cyan-bright: #f2cf6d;
+      --blue: #9f711c;
+      --gold: #f59e0b;
+      --red: #ef4444;
+      --green: #22c55e;
+      --teal: #14b8a6;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,10 +33,10 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: var(--bg);
       background-image:
-        radial-gradient(circle at 15% 10%, rgba(182, 137, 58, 0.14), transparent 38%),
-        radial-gradient(circle at 85% 22%, rgba(15, 35, 66, 0.08), transparent 42%),
-        linear-gradient(rgba(15, 35, 66, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 35, 66, 0.035) 1px, transparent 1px);
+        radial-gradient(circle at 15% 10%, rgba(212, 168, 67, 0.12), transparent 35%),
+        radial-gradient(circle at 85% 25%, rgba(180, 130, 42, 0.10), transparent 40%),
+        linear-gradient(rgba(212, 168, 67, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 168, 67, 0.035) 1px, transparent 1px);
       background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
       color: var(--text);
       line-height: 1.6;
@@ -51,8 +51,8 @@
       top: 0;
       z-index: 100;
       backdrop-filter: blur(16px);
-      background: rgba(244, 238, 228, 0.92);
-      border-bottom: 1px solid rgba(15, 35, 66, 0.12);
+      background: rgba(9, 9, 11, 0.88);
+      border-bottom: 1px solid var(--border);
     }
     .nav-inner {
       max-width: 1260px;
@@ -759,51 +759,32 @@
       .sw-tabs-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    /* Desert Sand & Royal Navy (Diriyah Luxury) Theme Overrides */
+    /* Obsidian & Gold Executive Theme Overrides */
     .brand-badge,
     .btn-primary,
     .disc-tab.active {
-      background: linear-gradient(135deg, #0f2342, #1d3c6e) !important;
-      color: #fffdf9 !important;
-      box-shadow: 0 8px 24px rgba(15, 35, 66, 0.24) !important;
+      background: linear-gradient(135deg, #f5d377, #c9962d) !important;
+      color: #09090b !important;
+      box-shadow: 0 8px 26px rgba(212, 168, 67, 0.32) !important;
     }
     .btn-primary:hover {
-      background: linear-gradient(135deg, #16325c, #244b88) !important;
-      box-shadow: 0 12px 30px rgba(15, 35, 66, 0.34) !important;
+      box-shadow: 0 12px 34px rgba(242, 207, 109, 0.48) !important;
     }
     .disc-tab.active .cnt {
-      background: rgba(255, 253, 249, 0.22) !important;
-      color: #fffdf9 !important;
+      background: rgba(9, 9, 11, 0.22) !important;
+      color: #09090b !important;
     }
     .btn-outline,
     .disc-tab,
     .bim-tab,
     .about-proj-pill {
-      background: #fffdf9 !important;
-      color: #0f2342 !important;
-      border: 1px solid rgba(15, 35, 66, 0.16) !important;
-    }
-    .btn-outline:hover,
-    .disc-tab:hover,
-    .about-proj-pill:hover {
-      border-color: #b6893a !important;
-      color: #0f2342 !important;
-      box-shadow: 0 8px 22px rgba(182, 137, 58, 0.16) !important;
-    }
-    .hero h1, .section-head h2, .project-header h3, .exp-top h3, .skill-card h3,
-    .panel-title-bar h4, .sw-tab-name, .sw-detail-left h4, .about-mini strong,
-    .about-proj-pill strong, .img-card-body strong, .cert-body strong, footer h3 {
-      color: #0f2342 !important;
+      background: rgba(20, 20, 24, 0.85) !important;
     }
     .hero h1 .accent {
-      background: linear-gradient(135deg, #b6893a, #8d6420, #0f2342) !important;
+      background: linear-gradient(135deg, #fae29c, #d4a843, #a8771e) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
     }
-    .hero-sub, .about-bio p, .exp-org, .legend-bar, .pill, .contact-chip {
-      color: #334155 !important;
-    }
-    .about-bio p strong, .pill strong { color: #0f2342 !important; }
     .eyebrow,
     .cover-kicker,
     .project-loc,
@@ -811,90 +792,62 @@
     .sw-tab-code,
     .esp-metric,
     .skill-tag,
-    .exp-date,
-    .cert-badge {
-      background: rgba(182, 137, 58, 0.14) !important;
-      border-color: rgba(182, 137, 58, 0.36) !important;
-      color: #7c5616 !important;
+    .exp-date {
+      background: rgba(212, 168, 67, 0.12) !important;
+      border-color: rgba(242, 207, 109, 0.3) !important;
+      color: #f2cf6d !important;
     }
-    .esp-metric strong, .stat-box strong { color: #0f2342 !important; }
-    .section-tag, .project-num, .about-mini small, .about-proj-pill small { color: #9c7022 !important; }
     .cover-gate {
       background:
-        radial-gradient(circle at 50% 18%, rgba(182, 137, 58, 0.18), transparent 55%),
-        radial-gradient(circle at 18% 82%, rgba(15, 35, 66, 0.08), transparent 48%),
-        linear-gradient(180deg, #ede5d8 0%, #f4eee4 100%) !important;
-      border-bottom: 1px solid rgba(15, 35, 66, 0.12) !important;
+        radial-gradient(circle at 50% 18%, rgba(212, 168, 67, 0.16), transparent 52%),
+        radial-gradient(circle at 20% 82%, rgba(168, 119, 30, 0.12), transparent 46%),
+        linear-gradient(180deg, #060608 0%, #09090b 100%) !important;
     }
     .cover-frame {
-      background: linear-gradient(145deg, rgba(182, 137, 58, 0.55), rgba(255, 253, 249, 0.95), rgba(15, 35, 66, 0.35)) !important;
-      box-shadow: 0 30px 75px rgba(15, 35, 66, 0.18), 0 0 40px rgba(182, 137, 58, 0.14) !important;
+      background: linear-gradient(145deg, rgba(242, 207, 109, 0.42), rgba(20, 20, 24, 0.9), rgba(180, 130, 42, 0.35)) !important;
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.78), 0 0 70px rgba(212, 168, 67, 0.18) !important;
     }
     .about-card,
-    .sw-box-frame,
-    .project-block,
-    .skill-card,
-    .exp-card,
-    .cert-card,
-    .sw-detail-panel {
-      background: #fffdf9 !important;
-      border-color: rgba(15, 35, 66, 0.13) !important;
-      box-shadow: 0 14px 36px rgba(15, 35, 66, 0.07) !important;
+    .sw-box-frame {
+      background: linear-gradient(180deg, rgba(17, 18, 22, 0.97) 0%, rgba(11, 11, 14, 0.99) 100%) !important;
+      box-shadow: var(--shadow), 0 0 50px rgba(212, 168, 67, 0.08) !important;
     }
-    .exp-card { border-left: 4px solid #b6893a !important; }
     .sw-box-badge {
-      background: linear-gradient(135deg, #0f2342, #1d3c6e) !important;
-      border-color: #b6893a !important;
-      color: #f4eee4 !important;
+      background: linear-gradient(135deg, rgba(212, 168, 67, 0.24), rgba(159, 113, 28, 0.18)) !important;
+      border-color: rgba(242, 207, 109, 0.48) !important;
+      color: #fef3c7 !important;
     }
     .sw-tab-card {
-      background: #f8f4ec !important;
-      border: 1px solid rgba(15, 35, 66, 0.13) !important;
-      box-shadow: 0 10px 24px rgba(15, 35, 66, 0.07) !important;
+      background: #14151a !important;
+      border-color: rgba(212, 168, 67, 0.18) !important;
     }
     .sw-tab-card:hover {
-      border-color: #b6893a !important;
-      box-shadow: 0 16px 34px rgba(15, 35, 66, 0.14), 0 0 18px rgba(182, 137, 58, 0.18) !important;
+      border-color: rgba(242, 207, 109, 0.55) !important;
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.65), 0 0 28px rgba(212, 168, 67, 0.22) !important;
     }
     .sw-tab-card.active {
-      background: linear-gradient(180deg, #fffdf9 0%, #f3eadb 100%) !important;
-      border-color: #0f2342 !important;
-      box-shadow: 0 16px 36px rgba(15, 35, 66, 0.16) !important;
+      background: linear-gradient(180deg, #201c13 0%, #141310 100%) !important;
+      border-color: #f2cf6d !important;
+      box-shadow: 0 22px 46px rgba(0, 0, 0, 0.7), 0 0 32px rgba(212, 168, 67, 0.28) !important;
     }
-    .sw-tab-role { color: #4b5a72 !important; }
     .sw-icon-wrap {
-      border: 1px solid rgba(15, 35, 66, 0.18);
-      box-shadow: 0 8px 18px rgba(15, 35, 66, 0.18);
+      border: 1px solid rgba(242, 207, 109, 0.24);
     }
     .stat-box,
     .about-mini,
     .pill,
-    .legend-bar,
-    .contact-chip {
-      background: #f5efe4 !important;
-      border-color: rgba(15, 35, 66, 0.12) !important;
-    }
-    .img-card {
-      background: #fbf8f2 !important;
-      border-color: rgba(15, 35, 66, 0.13) !important;
+    .legend-bar {
+      background: rgba(24, 24, 29, 0.82) !important;
     }
     .hero-visual {
-      background: #0f2342 !important;
-      border-color: rgba(182, 137, 58, 0.45) !important;
-      box-shadow: 0 24px 60px rgba(15, 35, 66, 0.22) !important;
+      background: #08080a !important;
+      box-shadow: var(--shadow), 0 0 60px rgba(212, 168, 67, 0.14) !important;
     }
     .hero-caption {
-      background: linear-gradient(transparent, rgba(15, 35, 66, 0.94)) !important;
-      color: #fffdf9 !important;
+      background: linear-gradient(transparent, rgba(9, 9, 11, 0.96)) !important;
     }
-    .hero-caption strong { color: #fffdf9 !important; }
-    .hero-caption small { color: #f2cf6d !important; }
-    .bim-stage { background: #0f2342 !important; }
-    .bim-stage-label { background: rgba(15, 35, 66, 0.9) !important; color: #fffdf9 !important; }
-    footer {
-      background: #ebe2d3 !important;
-      border-top: 1px solid rgba(15, 35, 66, 0.14) !important;
-    }
+    .bim-stage { background: #08080a !important; }
+    .bim-stage-label { background: rgba(9, 9, 11, 0.86) !important; }
 
     @media print {
       body { background: #fff !important; color: #0f172a !important; }
